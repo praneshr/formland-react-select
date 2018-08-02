@@ -4,39 +4,7 @@ import 'formland/css/index.css'
 
 import Formland from 'formland/lib'
 import { componentResolver, valueResolver } from '../../lib'
-
-const config = [
-  {
-    id: 'one',
-    type: 'text',
-    displayName: 'test',
-    resultPath: 'one.two',
-  },
-  {
-    id: 'sel',
-    type: 'react-select',
-    displayName: 'test',
-    resultPath: 'one.five',
-    componentProps: {
-      isMulti: true,
-      options: [
-        {
-          value: '124453',
-          label: '123',
-        },
-        {
-          value: '124563',
-          label: '12dfg3',
-        },
-        {
-          value: '123453',
-          label: '12dfbvcxb3',
-        },
-      ],
-    },
-  },
-]
-
+import config from './form-config'
 
 class Example extends Component {
   constructor() {
