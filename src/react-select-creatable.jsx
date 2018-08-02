@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import CreatableSelect from 'react-select/lib/Creatable'
+import { prototype } from 'stream';
 
 export default class ReactSelectCreatable extends PureComponent {
   render() {
@@ -23,10 +24,10 @@ export default class ReactSelectCreatable extends PureComponent {
 }
 
 ReactSelectCreatable.propTypes = {
-  value: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.number,
-    label: PropTypes.string,
-  })).isRequired,
+  value: PropTypes.arrayOf([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   config: PropTypes.shape().isRequired,
   callbacks: PropTypes.shape().isRequired,
 }

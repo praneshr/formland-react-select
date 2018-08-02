@@ -23,10 +23,10 @@ export default class ReactSelect extends PureComponent {
 }
 
 ReactSelect.propTypes = {
-  value: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.number,
-    label: PropTypes.string,
-  })).isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   config: PropTypes.shape().isRequired,
   callbacks: PropTypes.shape().isRequired,
 }
