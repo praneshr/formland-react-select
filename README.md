@@ -19,6 +19,8 @@ import {
   componentResolver as reactSelectComponentResolvers,
   valueResolver as reactSelectValueResolvers,
   } from 'formland-react-select'
+
+
 const colourOptions = [
   { value: 'ocean', label: 'Ocean', color: '#00B8D9' },
   { value: 'blue', label: 'Blue', color: '#0052CC' },
@@ -26,7 +28,7 @@ const colourOptions = [
   { value: 'red', label: 'Red', color: '#FF5630' },
 ]
 
-export default [
+const config = [
   {
     id: 'simple',
     type: 'react-select', // check 'type' section under options for more possible values
