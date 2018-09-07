@@ -1,18 +1,21 @@
 {
   "name": "formland-react-select",
-  "version": "1.0.0",
-  "description": "react-select resolvers for Formland",
+  "version": "0.1.0",
+  "private": false,
+  "description": "react-select components for Formland",
+  "license": "MIT",
+  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
   "main": "lib/index.js",
   "repository": "git@github.com:praneshr/formland-react-select.git",
-  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "formland": "^1.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-select": "^2.0.0",
-    "webpack": "^4.16.3"
+  "scripts": {
+    "build": "babel src/ --out-dir lib",
+    "build:examples": "webpack --progress --colors",
+    "build:examples:watch": "webpack --progress --colors --watch",
+    "build:watch": "babel src/ --out-dir lib --watch",
+    "prepublish": "rm -rf lib && yarn build",
+    "postpublish": "yarn publish:examples:local",
+    "publish:examples:local": "NODE_ENV=production yarn build:examples && gh-pages -d examples/build",
+    "start:dev": "webpack-dev-server --hot --open"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.55",
@@ -29,16 +32,23 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "formland": "^1.0.0",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-select": "^2.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   },
-  "scripts": {
-    "build:watch": "babel src/ --out-dir lib --watch",
-    "build:examples:watch": "webpack --progress --colors --watch",
-    "start:dev": "webpack-dev-server --hot --open"
+  "peerDependencies": {
+    "formland": "^1.0.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-select": "^2.0.0"
   }
 }

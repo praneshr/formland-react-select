@@ -10,7 +10,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.scss', '.jsx', '.png', '.svg', '.jpg'],
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'development',
   devServer: {
     contentBase: path.join(__dirname, 'examples/build'),
     index: 'index.html',

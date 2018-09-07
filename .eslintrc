@@ -14,5 +14,5 @@
     "react/jsx-filename-extension": "never",
     "import/prefer-default-export": "warn",
     "import/no-extraneous-dependencies": "off"
-  },
+  }
 }
