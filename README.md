@@ -80,6 +80,7 @@ class Example extends Component {
 |[React Select](https://react-select.com/home#welcome)| `react-select`|
 |[React Select Creatable](https://react-select.com/creatable)| `react-select-creatable`|
 |[React Select Async](https://react-select.com/async)| `react-select-async`|
+|[React Select Async Creatable](https://react-select.com/async)| `react-select-async-creatable`|
 
 #### Props
 
